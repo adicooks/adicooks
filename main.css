@@ -1,0 +1,193 @@
+* {
+  font-family: 'Poppins';
+}
+
+body {
+  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+  overflow-x: hidden;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.home a {
+  margin: 0 15px;
+  color: white;
+  font-family: 'Poppins';
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.home a:hover {
+  padding: 3.5px;
+  border: 2.5px solid white;
+}
+
+
+img {
+  position: relative;
+  left: -100%;
+  animation: slide-in 0.75s forwards;
+  top: 100px;
+}
+
+@keyframes slide-in {
+  from {
+    left: -100%;
+    opacity: 0;
+  }
+  to {
+    left: 7.5%;
+    opacity: 1;
+  }
+}
+
+
+h1 {
+  color: black;
+  font-size: 100px;
+  position: relative;
+  left: 45%;
+  bottom: 400px;
+}
+
+/* animation */
+h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 1s steps(20) 1 alternate,
+    blink 10000ms steps(20) infinite normal;
+  border-right: .05em solid black;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 40%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: black;
+  }
+
+  to {
+    border-color:#8ec5fc;
+  }
+}
+
+.above h2 {
+  color: black;
+  font-size: 35px;
+  position: absolute;
+  left: 47.5%;
+  top: 350px;
+  width: 800px;
+}
+
+button {
+  color: black;
+  font-size: 35px;
+  position: absolute;
+  left: 56.5%;
+  width: 200px;
+  z-index: 1;
+  border-radius: 15px;
+  background: transparent;
+  border: 5px solid black;
+  top: 485px;
+}
+
+.intr_abt h3 {
+  font-size: 50px;
+  position: absolute;
+  top: 800px;
+  border: 5px solid black;
+  padding: 5px;
+  left: 50%;
+  background: transparent;
+  /* move the left edge of the box to the center of its containing block */
+  transform: translateX(-50%);
+  /* move the box to the left by half of its own width */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.intr_abt.visible h3 {
+  opacity: 1;
+}
+
+.box {
+  height: 280px;
+  width: 1000px;
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  top: 965px;
+  border: 5px solid black;
+  background: transparent;
+  left: 50%;
+  /* move the left edge of the box to the center of its containing block */
+  transform: translateX(-50%);
+  /* move the box to the left by half of its own width */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.box.visible {
+  opacity: 1;
+}
+
+.intr_busi h3 {
+  font-size: 50px;
+  position: absolute;
+  top: 1270px;
+  border: 5px solid black;
+  padding: 5px;
+  left: calc(48% - 237.5px);
+  /* move the left edge of the box to the center of its containing block */
+  transform: translateX(-48%);
+  /* move the box to the left by half of its own width */
+  opacity: 0;
+  transition: opacity 1s;
+  background: transparent;
+}
+
+.intr_busi.visible h3 {
+  opacity: 1;
+}
+
+.business {
+  height: 280px;
+  width: 475px;
+  position: absolute;
+  background: transparent;
+  padding: 10px;
+  top: 1435px;
+  border: 5px solid black;
+  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+  left: calc(47.5% - 237.5px); /* half of the business width */
+  /* move the left edge of the box to the center of its containing block */
+  transform: translateX(-47.5%);
+  /* move the box to the left by half of its own width */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.business.visible {
+  opacity: 1;
+}
+
+footer {
+  position:absolute;
+  top: 2000px;
+  padding: 5px;
+}
