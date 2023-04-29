@@ -10,6 +10,36 @@ body {
   overscroll-behavior: none;
 }
 
+@media only screen and (max-width: 768px) {
+  img {
+    top: 50px;
+  }
+
+  .above h2 {
+    font-size: 20px;
+  }
+
+  .box, .business, .skills, .coding, .contact {
+    width: 100%;
+  }
+
+  .coding img {
+    width: 50px;
+  }
+
+  #nav-toggle {
+    display: block;
+  }
+
+  .home a {
+    font-size: 16px;
+  }
+
+  #home .typewriter {
+    top: 40%;
+  }
+}
+
 .home {
   display: flex;
   justify-content: center;
@@ -113,7 +143,7 @@ button {
 .intr_abt h3 {
   font-size: 50px;
   position: absolute;
-  top: 800px;
+  top: 825px;
   border: 5px solid black;
   padding: 5px;
   left: 50%;
@@ -135,7 +165,7 @@ button {
   position: absolute;
   background-color: white;
   padding: 10px;
-  top: 965px;
+  top: 990px;
   border: 5px solid black;
   background: transparent;
   left: 50%;
@@ -153,7 +183,7 @@ button {
 .intr_busi h3 {
   font-size: 50px;
   position: absolute;
-  top: 1275px;
+  top: 1300px;
   border: 5px solid black;
   padding: 5px;
   left: calc(47.5% - 235px);
@@ -173,7 +203,7 @@ button {
   position: absolute;
   background: transparent;
   padding: 10px;
-  top: 1445px;
+  top: 1470px;
   border: 5px solid black;
   left: calc(47.5% - 239.5px); /* half of the business width */
   /* move the left edge of the box to the center of its containing block */
@@ -190,7 +220,7 @@ button {
 .intr_skills h3 {
   font-size: 50px;
   position: absolute;
-  top: 1275px;
+  top: 1300px;
   border: 5px solid black;
   padding: 5px;
   left: calc(47.5% + 285px);
@@ -210,7 +240,7 @@ button {
   position: absolute;
   background: transparent;
   padding: 10px;
-  top: 1445px;
+  top: 1470px;
   border: 5px solid black;
   background: transparent;
   left: calc(47.5% + 285px); /* half of the business width */
@@ -228,7 +258,7 @@ button {
 .intr_coding h3 {
   font-size: 50px;
   position: absolute;
-  top: 1760px;
+  top: 1785px;
   border: 5px solid black;
   padding: 5px;
   left: calc(47.5% - 233px);
@@ -248,24 +278,141 @@ button {
   position: absolute;
   background: transparent;
   padding: 10px;
-  top: 1920px;
+  top: 1945px;
   border: 5px solid black;
-  left: calc(47.5% - 239.5px); /* half of the business width */
-  /* move the left edge of the box to the center of its containing block */
+  left: calc(47.5% - 239.5px);
   transform: translateX(-47.5%);
-  /* move the box to the left by half of its own width */
   opacity: 0;
   transition: opacity 0.5s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .coding.visible {
   opacity: 1;
 }
 
+.coding img {
+  height: 100px;
+  margin-right: 65px;
+  position: relative;
+  top: 20px;
+}
+
+.coding img:nth-child(2) {
+  margin-right: 70px;
+}
+
+.coding img.html {
+  width: calc(23%);
+}
+
+
+.coding img.css {
+  width: calc(17%);
+}
+
+.coding img.js {
+  width: calc(17%);
+}
+
+.coding img.html,
+.coding img.css,
+.coding img.js {
+  transform: translateX(-10px);
+  top: 40px;
+}
+
+.coding img.java,
+.coding img.python,
+.coding img.swift {
+  top: 20px;
+}
+
+.coding img.swift {
+  height: 90px;
+  top: 10px;
+}
+
+.coding img.java {
+  top: 10px;
+}
+
+.coding h5 {
+  position: fixed;
+  top: -5px;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.popup:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.coding:hover .popup {
+  display: none;
+}
+
+.coding:hover .html:hover ~ .html-popup {
+  display: block;
+  left: 19%;
+  top: 10px;
+}
+
+.coding:hover .css:hover ~ .css-popup {
+  display: block;
+  left: 52%;
+  top: 10px;
+}
+
+.coding:hover .js:hover ~ .js-popup {
+  display: block;
+  left: 82%;
+  top: 10px;
+}
+
+.coding:hover .python:hover ~ .python-popup {
+  display: block;
+  top: 265px;
+  left: 19%;
+}
+
+.coding:hover .java:hover ~ .java-popup {
+  display: block;
+  top: 265px;
+  left: 50%;
+}
+
+.coding:hover .swift:hover ~ .swift-popup {
+  display: block;
+  top: 265px;
+  left: 81.5%;
+}
+
 .intr_contact h3 {
   font-size: 50px;
   position: absolute;
-  top: 1760px;
+  top: 1785px;
   border: 5px solid black;
   padding: 5px;
   left: calc(47.5% + 291.5px);
@@ -285,13 +432,11 @@ button {
   position: absolute;
   background: transparent;
   padding: 10px;
-  top: 1920px;
+  top: 1945px;
   border: 5px solid black;
   background: transparent;
-  left: calc(47.5% + 285px); /* half of the business width */
-  /* move the left edge of the box to the center of its containing block */
+  left: calc(47.5% + 285px);
   transform: translateX(-47.5%);
-  /* move the box to the left by half of its own width */
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -302,7 +447,7 @@ button {
 
 footer {
   position:absolute;
-  top: 2250px;
+  top: 2300px;
   padding: 15px;
   font-size: smaller;
   opacity: 0.75;
