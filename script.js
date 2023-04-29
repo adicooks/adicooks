@@ -58,10 +58,43 @@ if (skillssPosition < screenPosition) {
 }
 });
 
+//coding text
+window.addEventListener('scroll', function () {
+var coding = document.getElementById('intr_coding');
+var intrCodingPosition = coding.getBoundingClientRect().top;
+var screenPosition = window.innerHeight / 1.5;
+if (intrCodingPosition < screenPosition) {
+    coding.classList.add('visible');
+}
+});
 
+//coding box
+window.addEventListener('scroll', function () {
+var codingg = document.getElementById('coding');
+var codinggPosition = codingg.getBoundingClientRect().top;
+var screenPosition = window.innerHeight / 1.5;
+if (codinggPosition < screenPosition) {
+    codingg.classList.add('visible');
+}
+});
 
+//contact text
+window.addEventListener('scroll', function () {
+var contact = document.getElementById('intr_contact');
+var intrContactPosition = contact.getBoundingClientRect().top;
+var screenPosition = window.innerHeight / 1.5;
+if (intrContactPosition < screenPosition) {
+    contact.classList.add('visible');
+}
+});
 
-
-
-
+//contact box
+window.addEventListener('scroll', function () {
+var contactt = document.getElementById('contact');
+var contacttPosition = contactt.getBoundingClientRect().top;
+var screenPosition = window.innerHeight / 1.5;
+if (contacttPosition < screenPosition) {
+    contactt.classList.add('visible');
+}
+});
 
