@@ -3,7 +3,7 @@
 </script>
 
 <Card
-  href="https://espn.com"
+  href="https://www.tiktok.com/@riddhirajpall"
   additionalClasses="hover:scale-100 bg-gradient-to-b from-[#D8DAE0] to-[#C0C3CE]"
 >
   <div
