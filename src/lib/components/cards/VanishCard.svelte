@@ -4,7 +4,7 @@
   import FilterBackground from "$lib/assets/filter-bg.png";
 </script>
 
-<Card href="https://vanish.so" additionalClasses="hover:scale-100 bg-[#010313]">
+<Card href="https://twitter.com/chemwithanstice" additionalClasses="hover:scale-100 bg-[#010313]">
   <div
     class="px-[22px] py-4 flex flex-col justify-end items-start text-white h-full"
   >
